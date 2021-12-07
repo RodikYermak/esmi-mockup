@@ -1,11 +1,9 @@
 import React from 'react'
-import IndustriesTable from './IndustriesTable'
 
-function IndustriesEmploying() {
+function IndustriesEmploying(props) {
     return (
         <div>
-            <h1>Industries Employing</h1>
-            <IndustriesTable />
+            <h1>Industries Employing {props.title}</h1>
         </div>
     )
 }

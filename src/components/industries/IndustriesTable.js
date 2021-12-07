@@ -1,16 +1,9 @@
 import React from 'react'
-import IndustriesTableRow from './IndustriesTableRow'
+
 
 function IndustriesTable() {
     return (
-        <>
-            <h3>Industries Table</h3>
-            <IndustriesTableRow />
-            <IndustriesTableRow />
-            <IndustriesTableRow />
-            <IndustriesTableRow />
-            <IndustriesTableRow />
-        </>
+        <p>Industry Occupation jobs in industry(2015) % of Occupation in industry(2015) % of Total Jobs in Industry(2015)</p>
     )
 }
 

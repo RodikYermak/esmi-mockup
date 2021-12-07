@@ -6,6 +6,7 @@ function OccupationSummaryCard(props) {
             <p>{props.top}</p>
             <p>{props.middle}</p>
             <p>{props.bottom}</p>
+            <p>---------------------</p>
         </>
     )
 }

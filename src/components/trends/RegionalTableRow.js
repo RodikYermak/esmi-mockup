@@ -1,10 +1,8 @@
 import React from 'react'
 
-function RegionalTableRow() {
+function RegionalTableRow(props) {
     return (
-        <p>
-            Regional Table Row
-        </p>
+        <p>icon {props.region} {props.startJobs} {props.endJobs} {props.change} {props.percentage}</p>
     )
 }
 
