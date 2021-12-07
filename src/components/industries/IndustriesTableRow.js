@@ -2,9 +2,7 @@ import React from 'react'
 
 function IndustriesTableRow() {
     return (
-        <p>
-            Industries Table Row
-        </p>
+        <p>Icon Software Publishers 4654 37.7% 8.8%</p>
     )
 }
 

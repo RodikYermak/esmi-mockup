@@ -1,13 +1,26 @@
-
+import React from 'react'
 import IndustriesEmploying from './components/industries/IndustriesEmploying';
-import OccupationOverview from './components/occupation/OccupationOverview';
-import OccupationSummaryCard from './components/occupation/OccupationSummaryCard';
+import IndustriesTable from './components/industries/IndustriesTable';
+import IndustriesTableRow from './components/industries/IndustriesTableRow';
+import OccupationOverview from './components/OccupationOverview';
+
 import RegionalTable from './components/trends/RegionalTable';
 import RegionalTableRow from './components/trends/RegionalTableRow';
 import RegionalTrends from './components/trends/RegionalTrends';
 import data from './data'
 
 function App() {
+  // const [data, setData] = useState({})
+  // useEffect(()=>{
+  //   fetch('https://run.mocky.io/v3/a2cc3707-8691-4188-8413-6183a7bb3d32')
+  //     .then(res=>res.json())
+  //     .then(data=>{
+  //       setData(prevData=>prevData=data)
+  //       console.log(data)
+  //       }
+  //     )
+  // },[])
+
   console.log(data)
   const occupationTitle = data.occupation.title
   const regionTitle = data.region.title
@@ -36,9 +49,6 @@ function App() {
   const employingIndustriesJobs = data.employing_industries.jobs
   const employingIndustries = data.employing_industries.industries
 
-
-
-
   console.log(
     occupationTitle, 
     regionTitle, 
@@ -59,11 +69,22 @@ function App() {
    employingIndustriesJobs,
    employingIndustries)
   return (
-    <>
-      <OccupationOverview occupationTitle={occupationTitle} regionTitle={regionTitle}/>
-      <OccupationSummaryCard top={summaryJobsRegional} middle={`Jobs (${summaryJobsYear})`} bottom={`${summaryJobsNationalAvgPercentage}% above National average`}/>
-      <OccupationSummaryCard top={`+${summaryJobsGrowthRegional}%`} middle={`% Change (${summaryJobsGrowthStartYear}-${summaryJobsGrowthEndYear}) `} bottom={`Nation: +${summaryJobsGrowthNationalAvg}%`}/>
-      <OccupationSummaryCard top={`$${summaryEarningsRegional}/hr`} middle={`Median Hourly Earnings`} bottom={`Nation: $${summaryEarningsNationalAvg}/hr`}/>
+    <div className="app-container">
+      <OccupationOverview 
+        occupationTitle={occupationTitle} 
+        regionTitle={regionTitle}
+        summaryJobsRegional={summaryJobsRegional} 
+        summaryJobsYear={summaryJobsYear} 
+        summaryJobsNationalAvg={summaryJobsNationalAvg}
+        summaryJobsGrowthRegional={summaryJobsGrowthRegional}
+        summaryJobsGrowthStartYear={summaryJobsGrowthStartYear}
+        summaryJobsGrowthEndYear={summaryJobsGrowthEndYear}
+        summaryJobsGrowthNationalAvg={summaryJobsGrowthNationalAvg}
+        summaryEarningsRegional={summaryEarningsRegional}
+        summaryEarningsNationalAvg={summaryEarningsNationalAvg}
+        summaryJobsNationalAvgPercentage={summaryJobsNationalAvgPercentage}
+      />
+      
       <RegionalTrends />
       <RegionalTable startYear = {trendComparisonStartYear} endYear={trendComparisonEndYear}/>
       <RegionalTableRow region={'Region'} startJobs={data.trend_comparison.regional[0]} endJobs={data.trend_comparison.regional[data.trend_comparison.regional.length-1]} change={data.trend_comparison.regional[data.trend_comparison.regional.length-1]-data.trend_comparison.regional[0]} percentage={10.2}/>
@@ -71,7 +92,13 @@ function App() {
       <RegionalTableRow region={'Nation'} startJobs={300651} endJobs={326205} change={25554} percentage={8.5}/>
       
       <IndustriesEmploying title={occupationTitle}/>
-    </>
+      <IndustriesTable />
+      <IndustriesTableRow />
+      <IndustriesTableRow />
+      <IndustriesTableRow />
+      <IndustriesTableRow />
+      <IndustriesTableRow />
+    </div>
   );
 }
 

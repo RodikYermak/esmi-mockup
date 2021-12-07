@@ -6,4 +6,84 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: "Roboto", sans-serif;
+  background: #e5e5e5;
+}
 
+.app-container {
+  width: 1024px;
+  height: 1424px;
+  background: #ffffff;
+  margin: 0 auto;
+  padding: 60px 50px;
+}
+
+/* Overview Component Styles */
+h1 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 37px;
+  color: #204354;
+}
+
+.occupation-title {
+  font-size: 18px;
+  line-height: 22px;
+  color: #204354;
+  font-weight: 100;
+  margin-top: 4px;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  color: #204354;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+.occupation-cards-container {
+  display: flex;
+  text-align: center;
+  border-top: 3px solid #f2f2f2;
+  border-bottom: 3px solid #f2f2f2;
+  margin-bottom: 50px;
+}
+
+.occupation-card {
+  padding: 35px 60px;
+  border-right: 3px solid #f2f2f2;
+}
+
+.occupation-card-top {
+  font-size: 40px;
+  line-height: 50px;
+  color: #204354;
+}
+
+.occupation-card-middle {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #204354;
+}
+
+.occupation-card-bottom {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #204354;
+  margin-top: 3px;
+}
+
+/* utilities */
+.no-right-border {
+  border-right: none;
+}
+
+.green {
+  color: #41d592;
+}
