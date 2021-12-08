@@ -1,11 +1,11 @@
 import React from 'react'
 
 function IndustriesEmploying(props) {
-    console.log(
-        props.industries
-    )
-    let year = props.industries.year
+    // employing_industries -> industries 
     let industriesArray = props.industries.industries
+    // year
+    let year = props.industries.year
+    // jobs
     let jobsTotal = props.industries.jobs
     return (
         <div>
