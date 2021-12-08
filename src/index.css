@@ -87,3 +87,12 @@ h2 {
 .green {
   color: #41d592;
 }
+
+.icon {
+  width: 18px;
+  height: 18px;
+}
+
+.blue {
+  background: #C9EBFA
+}

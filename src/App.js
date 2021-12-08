@@ -1,26 +1,10 @@
 import React from 'react'
 import IndustriesEmploying from './components/industries/IndustriesEmploying';
-import IndustriesTable from './components/industries/IndustriesTable';
-import IndustriesTableRow from './components/industries/IndustriesTableRow';
 import OccupationOverview from './components/OccupationOverview';
-
 import RegionalTable from './components/trends/RegionalTable';
-import RegionalTableRow from './components/trends/RegionalTableRow';
-import RegionalTrends from './components/trends/RegionalTrends';
 import data from './data'
 
 function App() {
-  // const [data, setData] = useState({})
-  // useEffect(()=>{
-  //   fetch('https://run.mocky.io/v3/a2cc3707-8691-4188-8413-6183a7bb3d32')
-  //     .then(res=>res.json())
-  //     .then(data=>{
-  //       setData(prevData=>prevData=data)
-  //       console.log(data)
-  //       }
-  //     )
-  // },[])
-
   console.log(data)
   const occupationTitle = data.occupation.title
   const regionTitle = data.region.title
@@ -46,28 +30,10 @@ function App() {
   const trendComparisonNation = data.trend_comparison.nation
 
 
-  const employingIndustriesJobs = data.employing_industries.jobs
-  const employingIndustries = data.employing_industries.industries
+  
+  const employingIndustries = data.employing_industries
 
-  console.log(
-    occupationTitle, 
-    regionTitle, 
-    summaryJobsRegional, 
-    summaryJobsYear, 
-    summaryJobsNationalAvg,
-    summaryJobsGrowthRegional,
-   summaryJobsGrowthStartYear,
-   summaryJobsGrowthEndYear,
-   summaryJobsGrowthNationalAvg,
-   summaryEarningsRegional,
-   summaryEarningsNationalAvg,
-   trendComparisonStartYear,
-   trendComparisonEndYear,
-   trendComparisonRegional,
-   trendComparisonState,
-   trendComparisonNation,
-   employingIndustriesJobs,
-   employingIndustries)
+  // console.log(trendComparisonRegional)
   return (
     <div className="app-container">
       <OccupationOverview 
@@ -85,19 +51,10 @@ function App() {
         summaryJobsNationalAvgPercentage={summaryJobsNationalAvgPercentage}
       />
       
-      <RegionalTrends />
-      <RegionalTable startYear = {trendComparisonStartYear} endYear={trendComparisonEndYear}/>
-      <RegionalTableRow region={'Region'} startJobs={data.trend_comparison.regional[0]} endJobs={data.trend_comparison.regional[data.trend_comparison.regional.length-1]} change={data.trend_comparison.regional[data.trend_comparison.regional.length-1]-data.trend_comparison.regional[0]} percentage={10.2}/>
-      <RegionalTableRow region={'State'} startJobs={13103} endJobs={14469} change={1366} percentage={10.4}/>
-      <RegionalTableRow region={'Nation'} startJobs={300651} endJobs={326205} change={25554} percentage={8.5}/>
+      <RegionalTable startYear = {trendComparisonStartYear} endYear={trendComparisonEndYear} region={trendComparisonRegional} state={trendComparisonState} nation={trendComparisonNation}/>
       
-      <IndustriesEmploying title={occupationTitle}/>
-      <IndustriesTable />
-      <IndustriesTableRow />
-      <IndustriesTableRow />
-      <IndustriesTableRow />
-      <IndustriesTableRow />
-      <IndustriesTableRow />
+      <IndustriesEmploying title={occupationTitle} industries={employingIndustries}/>
+     
     </div>
   );
 }
