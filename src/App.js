@@ -3,6 +3,7 @@ import IndustriesEmploying from './components/industries/IndustriesEmploying';
 import OccupationOverview from './components/OccupationOverview';
 import RegionalTable from './components/trends/RegionalTable';
 import data from './data'
+// import data from './ProjectSampleResponseData'
 
 function App() {
   console.log(data)

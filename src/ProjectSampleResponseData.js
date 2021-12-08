@@ -1,4 +1,4 @@
-{
+const data = {
 	"employing_industries": {
 		"industries": [
 			{
@@ -96,3 +96,5 @@
 		]
 	}
 }
+
+export default data;
