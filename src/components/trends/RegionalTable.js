@@ -19,13 +19,18 @@ function RegionalTable(props) {
 
 
     return (
-        <>
-            <h1>Regional Trends</h1>
-            <p>Region {props.startYear} jobs {props.endYear} jobs Change % Change </p>
-            <p> <img className="icon" src="./assets/eclipse.png" alt="eclipse" />Region {startYearRegional.toLocaleString('en-US')} {endYearRegional.toLocaleString('en-US')} {changeRegional.toLocaleString('en-US')} {percentageChangeRegional.toFixed(1)}%</p>
-            <p> <img className="icon" src="./assets/rectangle.png" alt="rectangle" />State {startYearState.toLocaleString('en-US')} {endYearState.toLocaleString('en-US')} {changeState.toLocaleString('en-US')} {percentageChangeState.toFixed(1)}%</p>
-            <p> <img className="icon" src="./assets/polygon.png" alt="polygon" />Nation {startYearNation.toLocaleString('en-US')} {endYearNation.toLocaleString('en-US')} {changeNation.toLocaleString('en-US')} {percentageChangeNation.toFixed(1)}%</p>
-        </>
+        <div className="mb">
+            <h2 className="border-bottom">Regional Trends</h2>
+            <p className="regional-header border-bottom flex pl"><span>Region</span><span> <span className="table-el">{props.startYear} jobs</span> <span className="table-el">{props.endYear} jobs</span> <span className="table-el"> Change </span> % Change</span> </p>
+            <p className="regional-header border-bottom flex"><span><img className="icon" src="./assets/eclipse.png" alt="eclipse" />Region</span> <span><span className="tbl-row1">{startYearRegional.toLocaleString('en-US')}</span> <span className="tbl-row1">{endYearRegional.toLocaleString('en-US')}</span> <span className="tbl-row1">{changeRegional.toLocaleString('en-US')}</span> {percentageChangeRegional.toFixed(1)}%</span></p>
+            <p className="regional-header border-bottom flex"><span><img className="icon" src="./assets/rectangle.png" alt="eclipse" />State</span> <span><span className="tbl-row1">{startYearState.toLocaleString('en-US')}</span> <span className="tbl-row1">{endYearState.toLocaleString('en-US')}</span> <span className="tbl-row1">{changeState.toLocaleString('en-US')}</span> {percentageChangeState.toFixed(1)}%</span></p>
+            <p className="regional-header border-bottom flex"><span><img className="icon" src="./assets/polygon.png" alt="eclipse" />Nation</span> <span><span className="tbl-row1">{startYearNation.toLocaleString('en-US')}</span> <span className="tbl-row1">{endYearNation.toLocaleString('en-US')}</span> <span className="tbl-row1">{changeNation.toLocaleString('en-US')}</span> {percentageChangeNation.toFixed(1)}%</span></p>
+
+
+
+            {/* <p className="regional-header border-bottom flex"><span> <img className="icon" src="./assets/rectangle.png" alt="rectangle" />State</span><span> {startYearState.toLocaleString('en-US')} {endYearState.toLocaleString('en-US')} {changeState.toLocaleString('en-US')} {percentageChangeState.toFixed(1)}%</span></p>
+            <p className="regional-header border-bottom flex"><span> <img className="icon" src="./assets/polygon.png" alt="polygon" />Nation</span><span> {startYearNation.toLocaleString('en-US')} {endYearNation.toLocaleString('en-US')} {changeNation.toLocaleString('en-US')} {percentageChangeNation.toFixed(1)}%</span></p> */}
+        </div>
     )
 }
 

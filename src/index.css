@@ -9,6 +9,7 @@
 body {
   font-family: "Roboto", sans-serif;
   background: #e5e5e5;
+  color: #204354;
 }
 
 .app-container {
@@ -25,13 +26,12 @@ h1 {
   font-weight: 700;
   font-size: 30px;
   line-height: 37px;
-  color: #204354;
 }
 
 .occupation-title {
   font-size: 18px;
   line-height: 22px;
-  color: #204354;
+
   font-weight: 100;
   margin-top: 4px;
 }
@@ -40,9 +40,8 @@ h2 {
   font-weight: bold;
   font-size: 18px;
   line-height: 22px;
-  color: #204354;
   margin-top: 25px;
-  margin-bottom: 10px;
+  padding-bottom: 10px;
 }
 
 .occupation-cards-container {
@@ -61,23 +60,38 @@ h2 {
 .occupation-card-top {
   font-size: 40px;
   line-height: 50px;
-  color: #204354;
 }
 
 .occupation-card-middle {
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
-  color: #204354;
 }
 
 .occupation-card-bottom {
   font-weight: 400;
   font-size: 14px;
   line-height: 17px;
-  color: #204354;
   margin-top: 3px;
 }
+
+/* regional trends component styles */
+
+.regional-header {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  padding: 10px 0px;
+}
+
+.table-el {
+  margin-right: 70px;
+}
+.tbl-row1 {
+  margin-right: 92px;
+}
+
+/*  */
 
 /* utilities */
 .no-right-border {
@@ -91,8 +105,27 @@ h2 {
 .icon {
   width: 18px;
   height: 18px;
+  margin-left: 10px;
+  margin-right: 22px;
 }
 
 .blue {
-  background: #C9EBFA
+  background: #c9ebfa;
+}
+
+.border-bottom {
+  border-bottom: 3px solid #f2f2f2;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pl {
+  padding-left: 50px;
+}
+
+.mb {
+  margin-bottom: 50px;
 }
