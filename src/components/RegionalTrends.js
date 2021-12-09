@@ -1,23 +1,23 @@
 import React from 'react'
 
-function RegionalTable(props) {
+function RegionalTrends(props) {
     // trend_comparison 
     let startYear = props.trend.start_year
     let endYear = props.trend.end_year
     let regionalArray = props.trend.regional
     let stateArray = props.trend.state
     let nationArray = props.trend.nation
-    // regional array data and calculation
+    // regional array data and calculations
     let startYearRegional = regionalArray[0]
     let endYearRegional = regionalArray[regionalArray.length-1]
     let changeRegional = endYearRegional-startYearRegional
     let percentageChangeRegional = changeRegional/startYearRegional*100
-    // state array data and calculation
+    // state array data and calculations
     let startYearState = stateArray[0]
     let endYearState = stateArray[stateArray.length-1]
     let changeState = endYearState-startYearState
     let percentageChangeState = changeState/startYearState*100
-    // nation array data and calculation
+    // nation array data and calculations
     let startYearNation = nationArray[0]
     let endYearNation = nationArray[nationArray.length-1]
     let changeNation = endYearNation-startYearNation
@@ -34,4 +34,4 @@ function RegionalTable(props) {
     )
 }
 
-export default RegionalTable
+export default RegionalTrends
