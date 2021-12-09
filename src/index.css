@@ -14,7 +14,7 @@ body {
 
 .app-container {
   width: 1024px;
-  height: 1624px;
+  height: 1524px;
   background: #ffffff;
   margin: 30px auto;
   padding: 60px 50px;
@@ -150,19 +150,70 @@ h2 {
 /* loading bar */
 .loadbar {
   width: 100%;
-  height: 30px;
+  height: 44px;
   /* background-color: #fff; */
   /* border: 1px solid #ccc; */
   position: relative;
+  /* padding: 12px; */
 }
 .bar {
   /* line-height: 25px; */
   height: 100%;
   display: block;
-  /* font-family: arial;
-  font-size: 12px; */
   background-color: #c9ebfa;
-  /* color: black; */
   position: absolute;
   opacity: 0.3;
+}
+
+.icon3 {
+  width: 15px;
+  height: 19px;
+  margin-left: 10px;
+  margin-right: 7px;
+  /* margin-top: 10px; */
+}
+
+.flex3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 5px;
+  height: 33px;
+}
+
+.left3 {
+  /* align-self: center; */
+  /* padding-bottom: 10px; */
+}
+
+.right3 {
+  align-self: center;
+  width: 300px;
+  text-align: right;
+}
+
+.ml3 {
+  margin-left: 81px;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.height3 {
+  height: 100px;
+}
+
+.width3 {
+  width: 30px;
+}
+
+.right4 {
+  align-self: center;
+  width: 400px;
+  text-align: right;
+}
+
+.ml4 {
+  margin-left: 10px;
 }

@@ -1,11 +1,11 @@
 import React from 'react'
-import IndustriesEmploying from './components/IndustriesEmploying';
+// import IndustriesEmploying from './components/IndustriesEmploying';
 import OccupationOverview from './components/OccupationOverview';
 import RegionalTable from './components/RegionalTrends';
-import Chart from './components/Chart';
+// import Chart from './components/Chart';
 import Bar from './components/Bar';
-import data from './data'
-// import data from './ProjectSampleResponseData'
+// import data from './data'
+import data from './ProjectSampleResponseData'
 
 function App() {
   // occupation
@@ -22,10 +22,9 @@ function App() {
   return (
     <div className="app-container">
       <OccupationOverview occupation={occupationData} region={regionData} summary={summaryData} />
-      <Chart /> 
       <RegionalTable trend={trendComparisonData} />
-      <IndustriesEmploying title={occupationData.title} industries={employingIndustries}/> 
-      <Bar industries={employingIndustries}/>
+      {/* <IndustriesEmploying title={occupationData.title} industries={employingIndustries}/>  */}
+      <Bar title={occupationData.title} industries={employingIndustries}/>
 
 
     </div>

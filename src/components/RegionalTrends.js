@@ -1,4 +1,5 @@
 import React from 'react'
+import Chart from './Chart'
 
 function RegionalTrends(props) {
     // trend_comparison 
@@ -26,6 +27,7 @@ function RegionalTrends(props) {
     return (
         <div className="mb">
             <h2 className="border-bottom">Regional Trends</h2>
+            <Chart /> 
             <p className="regional-header border-bottom flex pl"><span>Region</span><span> <span className="table-el">{startYear} jobs</span> <span className="table-el">{endYear} jobs</span> <span className="table-el"> Change </span> % Change</span> </p>
             <p className="regional-body border-bottom flex"><span><img className="icon" src="./assets/eclipse.png" alt="eclipse" />Region</span> <span><span className="tbl-row1">{startYearRegional.toLocaleString('en-US')}</span> <span className="tbl-row1">{endYearRegional.toLocaleString('en-US')}</span> <span className="tbl-row1">{changeRegional.toLocaleString('en-US')}</span> {percentageChangeRegional.toFixed(1)}%</span></p>
             <p className="regional-body border-bottom flex"><span><img className="icon" src="./assets/rectangle.png" alt="eclipse" />State</span> <span><span className="tbl-row1">{startYearState.toLocaleString('en-US')}</span> <span className="tbl-row1">{endYearState.toLocaleString('en-US')}</span> <span className="tbl-row1">{changeState.toLocaleString('en-US')}</span> {percentageChangeState.toFixed(1)}%</span></p>
