@@ -25,7 +25,7 @@ function App() {
       <Chart /> 
       <RegionalTable trend={trendComparisonData} />
       <IndustriesEmploying title={occupationData.title} industries={employingIndustries}/> 
-      <Bar title={occupationData.title} industries={employingIndustries}/>
+      <Bar industries={employingIndustries}/>
 
 
     </div>
