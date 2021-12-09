@@ -3,6 +3,7 @@ import IndustriesEmploying from './components/IndustriesEmploying';
 import OccupationOverview from './components/OccupationOverview';
 import RegionalTable from './components/RegionalTrends';
 import Chart from './components/Chart';
+import Bar from './components/Bar';
 import data from './data'
 // import data from './ProjectSampleResponseData'
 
@@ -24,7 +25,8 @@ function App() {
       <Chart /> 
       <RegionalTable trend={trendComparisonData} />
       <IndustriesEmploying title={occupationData.title} industries={employingIndustries}/> 
-      
+      <Bar title={occupationData.title} industries={employingIndustries}/>
+
 
     </div>
   );

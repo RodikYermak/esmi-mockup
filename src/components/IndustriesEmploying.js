@@ -34,3 +34,5 @@ function IndustriesEmploying(props) {
 }
 
 export default IndustriesEmploying
+
+
