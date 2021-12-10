@@ -95,6 +95,7 @@ h2 {
 }
 .tbl-row1 {
   margin-right: 92px;
+  /* background: red; */
 }
 
 /*  */
@@ -193,7 +194,11 @@ h2 {
 }
 
 .ml3 {
-  margin-left: 81px;
+  margin-left: 60px;
+  width: 70px;
+  display: inline-block;
+  /* background: red; */
+  text-align: right;
 }
 
 .bold {

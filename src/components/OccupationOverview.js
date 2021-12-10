@@ -28,12 +28,43 @@ function OccupationOverview(props) {
                 <div className="occupation-card">
                     <p className="occupation-card-top">{jobsRegional.toLocaleString('en-US')}</p>
                     <p className="occupation-card-middle">Jobs ({jobsYear})</p>  
-                    {jobsNationalAvgPercentage>100 ? <p className="occupation-card-bottom">{jobsNationalAvgPercentage}% <span className="green">above</span> National average</p> : <p className="occupation-card-bottom">{jobsNationalAvgPercentage}% <span className="red">below</span> National average</p>}
+                    {jobsNationalAvgPercentage>100 
+                        ? 
+                        <p className="occupation-card-bottom">
+                            {jobsNationalAvgPercentage}% 
+                            <span className="green">above</span> 
+                            National average
+                        </p>
+                        : 
+                        <p className="occupation-card-bottom">
+                            {jobsNationalAvgPercentage}% 
+                            <span className="red">below</span> 
+                            National average
+                        </p>
+                    }
                 </div>    
                 <div className="occupation-card">
-                    {jobsGrowthRegional > 0 ? <p className="occupation-card-top green">+{jobsGrowthRegional}%</p> : <p className="occupation-card-top red">{jobsGrowthRegional}%</p>}
+                    {jobsGrowthRegional > 0 
+                        ? 
+                        <p className="occupation-card-top green">
+                            +{jobsGrowthRegional}%
+                        </p> 
+                        : 
+                        <p className="occupation-card-top red">
+                            {jobsGrowthRegional}%
+                        </p>
+                    }
                     <p className="occupation-card-middle">% Change ({jobsGrowthStartYear}-{jobsGrowthEndYear})</p>
-                    {jobsGrowthNationalAvg > 0 ? <p className="occupation-card-bottom">Nation: <span className="green">+{jobsGrowthNationalAvg}%</span></p> : <p className="occupation-card-bottom">Nation: <span className="red">{jobsGrowthNationalAvg}%</span></p>}
+                    {jobsGrowthNationalAvg > 0 
+                        ? 
+                        <p className="occupation-card-bottom">
+                            Nation: <span className="green">+{jobsGrowthNationalAvg}%</span>
+                        </p> 
+                        : 
+                        <p className="occupation-card-bottom">
+                            Nation: <span className="red">{jobsGrowthNationalAvg}%</span>
+                        </p>
+                    }
                 </div>  
                 <div className="occupation-card no-right-border">
                     <p className="occupation-card-top">${earningsRegional}/hr</p>
