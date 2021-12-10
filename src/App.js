@@ -3,15 +3,15 @@ import IndustriesEmploying from './components/IndustriesEmploying';
 import OccupationOverview from './components/OccupationOverview';
 import RegionalTable from './components/RegionalTrends';
 // import data from './data'
-// import data from './ProjectSampleResponseData'
+import jsonData from './ProjectSampleResponseData'
 
 function App() {
   const [error, setError] = React.useState(null);
   const [isLoaded, setIsLoaded] = React.useState(false);
   const [emsiData, setEmsiData] = React.useState()
-  
+  const url = "https://run.mocky.io/v3/a2cc3707-8691-4188-8413-6183a7bb3d32"
   React.useEffect(()=>{
-    let url = "https://run.mocky.io/v3/a2cc3707-8691-4188-8413-6183a7bb3d32"
+    
     fetch(url)
       .then(res=>res.json())
       .then(result=>{
@@ -26,7 +26,20 @@ function App() {
   },[])
   
   const handleUpdating = () => {
-    console.log('updating')
+    console.log('updating', jsonData)
+    setEmsiData(jsonData)
+    //  Send data to the backend via POST
+    // fetch(url, {  // Enter your IP address here
+    //   method: 'POST', 
+    //   headers: {
+    //     "Content-Type" : "application/json"
+    //   }, 
+    //   body: JSON.stringify(jsonData) // body data type must match "Content-Type" header
+    // })
+    //   .then(res=>res.json())
+    //   .then(result=>{
+    //     console.log(result)
+    //   })
   }
 
   // console.log('data:', data, url, items)
@@ -48,7 +61,7 @@ function App() {
   } else {
     return (
     <div className="app-container">
-      <button onClick={handleUpdating}>Update Data</button>
+      <button onClick={handleUpdating}>Get Data for Graphic Designers</button>
       {emsiData && <OccupationOverview 
         occupation={emsiData.occupation} 
         region={emsiData.region} 
