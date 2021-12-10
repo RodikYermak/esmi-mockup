@@ -96,10 +96,7 @@ h2 {
 }
 .tbl-row1 {
   margin-right: 92px;
-  /* background: red; */
 }
-
-/*  */
 
 /* utilities */
 .no-right-border {
@@ -183,10 +180,7 @@ h2 {
   height: 33px;
 }
 
-.left3 {
-  /* align-self: center; */
-  /* padding-bottom: 10px; */
-}
+/* .left3 {} */
 
 .right3 {
   align-self: center;
@@ -198,7 +192,6 @@ h2 {
   margin-left: 60px;
   width: 70px;
   display: inline-block;
-  /* background: red; */
   text-align: right;
 }
 
@@ -225,7 +218,7 @@ h2 {
 }
 
 .btn {
-  background: #d0fde9;
+  background: #41d592;
   width: 270px;
   height: 50px;
   border: none;
@@ -238,8 +231,10 @@ h2 {
   text-transform: uppercase;
   position: absolute;
   right: 100px;
+  font-weight: 700;
+  color: #204354;
 }
 
 .btn:hover {
-  background: #41d592;
+  background: #d0fde9;
 }
