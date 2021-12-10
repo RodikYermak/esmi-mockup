@@ -32,13 +32,13 @@ function OccupationOverview(props) {
                         ? 
                         <p className="occupation-card-bottom">
                             {jobsNationalAvgPercentage}% 
-                            <span className="green">above</span> 
+                            <span className="green"> above </span> 
                             National average
                         </p>
                         : 
                         <p className="occupation-card-bottom">
                             {jobsNationalAvgPercentage}% 
-                            <span className="red">below</span> 
+                            <span className="red"> below </span> 
                             National average
                         </p>
                     }
